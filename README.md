@@ -70,3 +70,31 @@ Un screenshot est automatiquement pris à la fin du test et enregistré dans :
 ```bash
 screenshots/result.png
 ```
+
+
+
+## Test unitaire 
+
+### Tester le fichier
+J'ai défini le test unitaire dans :
+```bash
+src/__tests__/calculateJupiterTime.test.ts
+```
+
+### Lancer les tests unitaires
+Pour lancer les tests unitaires, je tape la commande la commande :
+```bash
+npm run test
+``` 
+
+### Explication des erreurs :
+
+Ces erreurs montrent que le comportement attendu ne correspond pas au résultat réel.
+Par exemple :
+```bash
+expected 'aprenoon' to be 'mortin'
+```
+Ca veut dire que le test s’attend à recevoir "mortin", mais la fonction a renvoyé "aprenoon".
+
+
+L'objectif c'est que les tests permettent de valider les différentes plages de résultat telles que mortin, aprenoon, soirning et nuight, puis d'identifier rapidement un bug si la logique est cassée et réviser la fonction **calculateJupiterTime** en cas d'incohérence.
